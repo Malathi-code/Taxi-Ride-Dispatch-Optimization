@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaxiGo | Smart Taxi Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">🚕 TaxiGo</div>
+
+        <span class="status">
+            <span class="dot"></span>
+            Dispatch System
+        </span>
+    </header>
+
+
+    <main class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <p class="eyebrow">
+                SMART RIDE DISPATCH
+            </p>
+
+            <h1>
+                Your ride.<br>
+                <span>Your way.</span>
+            </h1>
+
+            <p class="subtitle">
+                Book a taxi and let our system find the nearest available driver.
+            </p>
+
+        </section>
+
+
+        <!-- BOOKING SECTION -->
+        <section class="booking-card">
+
+            <h2>Book your ride</h2>
+
+            <p class="muted">
+                Enter your pickup coordinates to find a driver.
+            </p>
+
+
+            <form id="bookingForm">
+
+                <div class="field-row">
+
+                    <div class="field">
+
+                        <label for="pickupX">
+                            Pickup X coordinate
+                        </label>
+
+                        <input
+                            id="pickupX"
+                            type="number"
+                            step="any"
+                            value="5"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="pickupY">
+                            Pickup Y coordinate
+                        </label>
+
+                        <input
+                            id="pickupY"
+                            type="number"
+                            step="any"
+                            value="5"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="bookButton"
+                    type="submit"
+                >
+                    Find &amp; Book Taxi →
+                </button>
+
+            </form>
+
+
+            <div
+                id="result"
+                class="result hidden"
+                role="status"
+            ></div>
+
+        </section>
+
+
+        <!-- RECENT BOOKINGS -->
+        <section class="history-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Recent bookings
+                    </h2>
+
+                    <p class="muted">
+                        Latest taxi assignments
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="bookingHistory"
+                class="history-list"
+            >
+
+                <p class="muted">
+                    No bookings yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DRIVER SECTION -->
+        <section class="drivers-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Our drivers
+                    </h2>
+
+                    <p class="muted">
+                        Driver availability in the dispatch system
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="refreshButton"
+                    class="refresh-button"
+                    type="button"
+                >
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div
+                id="driverList"
+                class="driver-list"
+            >
+
+                <p class="muted">
+                    Loading drivers...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                TaxiGo · Smart Taxi Dispatch Optimization
+            </p>
+
+            <p>
+                Demo coordinates are used; they are not real map locations.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
